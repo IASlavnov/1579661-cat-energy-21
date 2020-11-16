@@ -102,7 +102,8 @@
           <img class="slider__item" src="https://via.placeholder.com/251x240" width="251" height="240" alt="Кот Борис сейчас">
           <p class="slider__toggles">
             <button class="slider__toggle slider__toggle--active" type="button">Было</button>
-            <input class="slider__bar" type="range" value="50">
+            <label class="visually-hidden" for="slider__bar">Изменение кота Бориса: было/стало</label>
+            <input class="slider__bar" id="slider__bar" name="slider__bar" type="range" value="50">
             <button class="slider__toggle" type="button">Стало</button>
           </p>
         </div>
@@ -115,7 +116,7 @@
 
     <div class="page-footer__contacts contacts">
       <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</p>
+      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
       <p class="contacts__city">Санкт-Петербург</p>
     </div>
     <div class="page-footer__map-block map-block">
@@ -129,18 +130,18 @@
       <div class="page-footer__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#">Мы в ВКонтакте</a>
+            <a class="socials__link socials__link--vk" href="#" aria-label="Мы в ВКонтакте">Мы в ВКонтакте</a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--instagram" href="#">Мы в Инстаграме</a>
+            <a class="socials__link socials__link--instagram" href="#" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--facebook" href="#">Мы в Фэйсбуке</a>
+            <a class="socials__link socials__link--facebook" href="#" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На лендинг интенсива &laquo;Профессиональный HTML и CSS, уровень 2&raquo;">
           <span class="copyright__text">HTML Academy</span>
           <img class="copyright__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
         </a>
