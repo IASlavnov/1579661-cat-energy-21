@@ -1,0 +1,29 @@
+.main-nav {
+  font-family: "Oswald", "Arial", sans-serif;
+  .font-set(20px, 20px, 500);
+  text-transform: uppercase;
+  &__toggle {
+    width: 24px;
+    height: 16px;
+  }
+  &__wrapper {
+    width: 280px;
+    text-align: center;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    padding: 22px 0 24px;
+    border-bottom: 1px solid @basic-grey-border;
+    &:first-child {
+      border-top: 1px solid @basic-grey-border;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: @basic-black;
+  }
+}
