@@ -1,0 +1,33 @@
+.show-all {
+  .main-fonts();
+  text-align: center;
+}
+
+.show-all__title {
+  .font-set(16px, 20px);
+  color: @additional-black;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.show-all__text {
+  .font-set(16px, 20px);
+  color: @special-dark-grey;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.show-all__button {
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  .font-set(16px, 0);
+  box-sizing: border-box;
+  padding-top: 20px;
+  margin-bottom: 25px;
+
+  &--pending {
+    color: @special-dark-grey;
+    background-color: @basic-grey;
+  }
+}
