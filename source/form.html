@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -35,92 +36,93 @@
     <div class="page-main__wrapper">
       <h1 class="page-main__title">Подбор программы</h1>
       <p class="page-main__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-
-      <form class="page-main__form form-selection" action="#" method="POST">
-        <fieldset class="form-selection__item cat">
-          <legend class="visually-hidden">Данные кота</legend>
-          <p class="cat__info">
-            <label class="cat__label" for="cat-name">Имя:<sup>*</sup></label>
-            <input class="cat__input cat__input--error" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
-          </p>
-          <p class="cat__info">
-            <label class="cat__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
-            <input class="cat__input cat__input--error" id="cat-weight" name="cat-weight" type="text" placeholder="7" required>
-          </p>
-          <p class="cat__info">
-            <label class="cat__label" for="cat-age">Возраст (лет):</label>
-            <input class="cat__input" id="cat-age" name="cat-age" type="text" placeholder="7">
-          </p>
-        </fieldset>
-
-        <fieldset class="form-selection__item program">
-          <legend class="visually-hidden">Выбор программы</legend>
-          <ul class="program__list">
-            <li class="program__item">
-              <input class="program__input visually-hidden" id="slim" name="program" type="radio" checked>
-              <label class="program__label" for="slim">Похудение</label>
-            </li>
-            <li class="program__item">
-              <input class="program__input visually-hidden" id="pro" name="program" type="radio">
-              <label class="program__label" for="pro">Набор массы</label>
-            </li>
-            <li class="program__item">
-              <input class="program__input visually-hidden" id="advice" name="program" type="radio">
-              <label class="program__label" for="advice">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="form-selection__item owner">
-          <legend class="owner__title">Контактные данные (владельца кота)</legend>
-          <p class="owner__info">
-            <label class="owner__label" for="owner-email">E-mail:<sup>*</sup></label>
-            <input class="owner__input owner__input--error" id="owner-email" name="owner-email" type="email" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p class="owner__info">
-            <label class="owner__label" for="owner-phone">Телефон:<sup>*</sup></label>
-            <input class="owner__input owner__input--error" id="owner-phone" name="owner-phone" type="tel" placeholder="8 (960) 900-60-90" required>
-          </p>
-        </fieldset>
-
-        <fieldset class="form-selection__item comment">
-          <legend class="comment__title">Комментарий</legend>
-          <label class="visually-hidden" for="comment-text">Дополнительные сведения о коте</label>
-          <textarea class="comment__text" id="comment-text" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
-
-        <fieldset class="form-selection__item additionally">
-          <legend class="additionally__title">Дополнительно</legend>
-          <ul class="additionally__list">
-            <li class="additionally__item">
-              <input class="additionally__input visually-hidden" id="sweetener" name="sweetener" type="checkbox" checked>
-              <label class="additionally__label" for="sweetener">Сахарозаменитель</label>
-            </li>
-            <li class="additionally__item">
-              <input class="additionally__input visually-hidden" id="water" name="water" type="checkbox">
-              <label class="additionally__label" for="water">Питьевая вода</label>
-            </li>
-            <li class="additionally__item">
-              <input class="additionally__input visually-hidden" id="milk" name="milk" type="checkbox">
-              <label class="additionally__label" for="milk">Молоко</label>
-            </li>
-            <li class="additionally__item">
-              <input class="additionally__input visually-hidden" id="vitamins" name="vitamins" type="checkbox">
-              <label class="additionally__label" for="vitamins">Витамины</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <div class="form-selection__submit">
-          <button class="form-selection__button button" type="submit">Отправить заявку</button>
-          <small class="form-selection__legend"><sup>*</sup> - Обязательные поля</small>
-        </div>
-      </form>
     </div>
+
+    <form class="page-main__form form-selection" action="https://echo.htmlacademy.ru" method="POST">
+      <fieldset class="form-selection__item cat">
+        <legend class="visually-hidden">Данные кота</legend>
+        <p class="cat__info">
+          <label class="cat__label" for="cat-name">Имя:<sup>*</sup></label>
+          <input class="cat__input cat__input--error" id="cat-name" name="cat-name" type="text" value="Барсик" required>
+        </p>
+        <p class="cat__info">
+          <label class="cat__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+          <input class="cat__input cat__input--error" id="cat-weight" name="cat-weight" type="text" value="7" required>
+        </p>
+        <p class="cat__info">
+          <label class="cat__label" for="cat-age">Возраст (лет):</label>
+          <input class="cat__input" id="cat-age" name="cat-age" type="text" value="7">
+        </p>
+      </fieldset>
+
+      <fieldset class="form-selection__item program-select">
+        <legend class="visually-hidden">Выбор программы</legend>
+        <ul class="program-select__list">
+          <li class="program-select__item">
+            <input class="program-select__input visually-hidden" id="slim" name="program" type="radio" checked>
+            <label class="program-select__label" for="slim">Похудение</label>
+          </li>
+          <li class="program-select__item">
+            <input class="program-select__input visually-hidden" id="pro" name="program" type="radio">
+            <label class="program-select__label" for="pro">Набор массы</label>
+          </li>
+          <li class="program-select__item">
+            <input class="program-select__input visually-hidden" id="advice" name="program" type="radio">
+            <label class="program-select__label" for="advice">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form-selection__item owner">
+        <legend class="owner__title">Контактные данные (владельца кота)</legend>
+        <p class="owner__info">
+          <label class="owner__label" for="owner-email">E-mail:<sup>*</sup></label>
+          <input class="owner__input owner__input--error" id="owner-email" name="owner-email" type="email" value="kuklachev@gmail.com" required>
+        </p>
+        <p class="owner__info">
+          <label class="owner__label" for="owner-phone">Телефон:<sup>*</sup></label>
+          <input class="owner__input owner__input--error" id="owner-phone" name="owner-phone" type="tel" value="8 (960) 900-60-90" required>
+        </p>
+      </fieldset>
+
+      <fieldset class="form-selection__item comment">
+        <legend class="comment__title">Комментарий</legend>
+        <label class="visually-hidden" for="comment-text">Дополнительные сведения о коте</label>
+        <textarea class="comment__text" id="comment-text" name="comment-text">Расскажите обо всех повадках кота</textarea>
+      </fieldset>
+
+      <fieldset class="form-selection__item additionally">
+        <legend class="additionally__title">Дополнительно</legend>
+        <ul class="additionally__list">
+          <li class="additionally__item">
+            <input class="additionally__input visually-hidden" id="sweetener" name="sweetener" type="checkbox" checked>
+            <label class="additionally__label" for="sweetener">Сахарозаменитель</label>
+          </li>
+          <li class="additionally__item">
+            <input class="additionally__input visually-hidden" id="water" name="water" type="checkbox">
+            <label class="additionally__label" for="water">Питьевая вода</label>
+          </li>
+          <li class="additionally__item">
+            <input class="additionally__input visually-hidden" id="milk" name="milk" type="checkbox">
+            <label class="additionally__label" for="milk">Молоко</label>
+          </li>
+          <li class="additionally__item">
+            <input class="additionally__input visually-hidden" id="vitamins" name="vitamins" type="checkbox">
+            <label class="additionally__label" for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <div class="form-selection__submit">
+        <button class="form-selection__button button" type="submit">Отправить заявку</button>
+        <small class="form-selection__legend"><sup>*</sup> - Обязательные поля</small>
+      </div>
+    </form>
+
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__contacts contacts">
+    <div class="page-footer__contacts contacts contacts--inner">
       <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
       <p class="contacts__city">Санкт-Петербург</p>
