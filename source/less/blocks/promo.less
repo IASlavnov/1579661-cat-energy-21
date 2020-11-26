@@ -4,7 +4,7 @@
 }
 
 .promo__wrapper {
-  width: 280px;
+  width: auto;
   padding: 27px 20px 0;
   text-align: center;
   background-color: @basic-green;
@@ -25,8 +25,40 @@
 .promo__button {
   display: inline-block;
   vertical-align: baseline;
+  width: 280px;
+  height: 40px;
   text-decoration: none;
   .font-set(14px, 18px);
   box-sizing: border-box;
   padding-top: 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__wrapper {
+    padding: 62px 30px 0;
+    color: @basic-black;
+    background-color: @basic-white;
+  }
+
+  .promo__slogan {
+    margin-bottom: 50px;
+  }
+
+  .promo__button {
+    .font-set(20px, 20px);
+    width: 244px;
+    height: 54px;
+    padding-top: 14px;
+    margin-bottom: 526px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__wrapper {
+    background: linear-gradient(to right, @basic-white 50%, @basic-green 50%);
+  }
+
+  .promo__button {
+    margin-bottom: 185px;
+  }
 }

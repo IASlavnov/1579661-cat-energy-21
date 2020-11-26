@@ -1,7 +1,8 @@
 .example__wrapper {
   padding: 27px 20px 33px;
-  width: 280px;
+  min-width: 280px;
   background-color: @basic-background-grey;
+  text-align: center;
 }
 
 .example__title {
@@ -37,4 +38,12 @@
   .font-set(14px, 20px);
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    padding: 70px 110px 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
