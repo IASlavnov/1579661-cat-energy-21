@@ -10,5 +10,13 @@
   border: none;
   .main-fonts();
   .font-set(16px, 20px);
+  text-transform: uppercase;
   background-color: @basic-background-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle {
+    .font-set(20px, 30px);
+    border-bottom: 1px dotted fade(@basic-black, 24%);
+  }
 }

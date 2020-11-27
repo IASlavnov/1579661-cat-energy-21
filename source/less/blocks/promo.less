@@ -18,6 +18,7 @@
 
 .promo__slogan {
   .font-set(14px, 14px);
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 302px;
 }
@@ -35,17 +36,25 @@
 
 @media (min-width: @tablet-width) {
   .promo__wrapper {
-    padding: 62px 30px 0;
+    padding: 62px 117px 0;
+    text-align: left;
     color: @basic-black;
     background-color: @basic-white;
   }
 
+  .promo__title {
+    .font-set(60px, 60px);
+    margin-bottom: 41px;
+  }
+
   .promo__slogan {
+    .font-set(20px, 20px);
     margin-bottom: 50px;
   }
 
   .promo__button {
     .font-set(20px, 20px);
+    text-align: center;
     width: 244px;
     height: 54px;
     padding-top: 14px;
@@ -55,6 +64,7 @@
 
 @media (min-width: @desktop-width) {
   .promo__wrapper {
+    padding: 114px 190px 0;
     background: linear-gradient(to right, @basic-white 50%, @basic-green 50%);
   }
 

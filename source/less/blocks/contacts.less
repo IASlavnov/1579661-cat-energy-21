@@ -1,5 +1,7 @@
 .contacts {
   padding: 28px 19px 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   &--inner {
     background-color: @basic-grey;
@@ -17,7 +19,28 @@
   color: @special-dark-grey;
 }
 
-.contacts__city {
-  .font-set(14px, 20px);
-  color: @special-dark-grey;
+@media (min-width: @tablet-width) {
+  .contacts {
+    padding: 67px 70px 52px;
+  }
+
+  .contacts__invitation {
+    .font-set(20px, 21px);
+    text-align: left;
+  }
+
+  .contacts__address {
+    .font-set(16px, 20px);
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding: 67px 76px 52px;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
 }
