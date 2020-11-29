@@ -7,6 +7,7 @@
   .font-set(16px, 18px);
   text-transform: uppercase;
   color: @special-dark-grey;
+  display: flex;
   margin-top: 0;
 
   &:last-child {
@@ -21,4 +22,27 @@
   color: @special-dark-grey;
   padding-left: 15px;
   border: 1px solid @basic-border-grey;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .cat {
+    border: none;
+  }
+
+  .cat__info {
+    .font-set(20px, 30px);
+  }
+
+  .cat__input {
+    .font-set(20px, 30px);
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat {
+    width: 50%;
+  }
 }

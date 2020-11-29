@@ -8,8 +8,10 @@
 .owner__info {
   .main-fonts();
   .font-set(16px, 18px);
+  margin-top: 0;
   text-transform: uppercase;
   color: @special-dark-grey;
+  display: flex;
 }
 
 .owner__input {
@@ -19,4 +21,33 @@
   color: @special-dark-grey;
   padding-left: 15px;
   border: 1px solid @special-grey;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner__title {
+    .font-set(36px, 36px);
+    margin-bottom: 55px;
+  }
+
+  .owner__info {
+    .font-set(20px, 30px);
+  }
+
+  .owner__input {
+    .font-set(20px, 30px);
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .owner__info {
+    width: 50%;
+  }
 }

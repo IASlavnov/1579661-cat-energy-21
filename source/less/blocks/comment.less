@@ -6,8 +6,9 @@
 }
 
 .comment__text {
-  width: 280px;
+  width: 100%;
   height: 150px;
+  box-sizing: border-box;
   padding-top: 13px;
   padding-left: 15px;
   .main-fonts();
@@ -15,4 +16,15 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   border: 1px solid @basic-border-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__title {
+    .font-set(36px, 36px);
+    margin-bottom: 55px;
+  }
+
+  .comment__text {
+    height: 174px;
+  }
 }
