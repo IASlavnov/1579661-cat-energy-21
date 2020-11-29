@@ -13,3 +13,25 @@
 .program-select__item {
   margin-bottom: 13px;
 }
+
+@media (min-width: @tablet-width) {
+  .program-select {
+    border: none;
+  }
+
+  .program-select__list {
+    .font-set(20px, 30px);
+    border: 1px solid @basic-border-grey;
+    padding: 25px 0 25px 28px;
+  }
+
+  .program-select__item {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-select {
+    width: 50%;
+  }
+}

@@ -19,3 +19,27 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .additionally__title {
+    .font-set(36px, 36px);
+  }
+
+  .additionally__list {
+    .font-set(20px, 30px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .additionally__item {
+    width: 50%;
+    margin-bottom: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally__item {
+    width: 25%;
+    margin-bottom: 30px;
+  }
+}
