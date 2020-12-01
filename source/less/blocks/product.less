@@ -46,3 +46,39 @@
   margin-top: 13px;
   margin-bottom: 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .product__title {
+    .font-set(20px, 24px);
+  }
+
+  .product__list {
+    .font-set(16px, 16px);
+  }
+
+  .product__characteristic {
+    padding-top: 5px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid @special-grey;
+  }
+
+  .product__value {
+    padding-top: 5px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid @special-grey;
+  }
+
+  .product__button {
+    width: 248px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__title {
+    .font-set(20px, 21px);
+  }
+
+  .product__button {
+    width: 168px;
+  }
+}
