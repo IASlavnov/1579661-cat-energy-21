@@ -1,22 +1,104 @@
 .slider__item {
   display: none;
+  background-color: @basic-background-grey;
 
   &--active {
     display: inline;
   }
 }
 
-.slider__toggle {
+.slider__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  /*@media (min-width: @tablet-width) {
+    justify-content: space-around;
+  }*/
+}
+
+.slider__button {
   border: none;
   .main-fonts();
   .font-set(16px, 20px);
   text-transform: uppercase;
   background-color: @basic-background-grey;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    .font-set(20px, 30px);
+    border-bottom: 1px dotted fade(@basic-black, 40%);
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .slider__toggle {
-    .font-set(20px, 30px);
-    border-bottom: 1px dotted fade(@basic-black, 24%);
+.slider__scale {
+  //Значение с фигмы - width: 76px;
+  width: 27%;
+  height: 6px;
+  padding: 3px 5px;
+  margin: 0 2px;
+  background-color: @basic-white;
+  border: 1px solid @special-grey;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    margin: 0 12px;
+    background-color: @basic-scale-grey;
+    border: none;
+  }
+}
+
+.slider__bar {
+  //Значение с фигмы - width: 35px;
+  width: 46%;
+  height: 6px;
+  background-color: @basic-green;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.slider__toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: @basic-green;
+    border: 12px solid @basic-white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px @basic-scale-grey, 0 1px 3px @basic-scale-grey;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 2px @basic-scale-grey,
+        0 2px 4px @basic-scale-grey;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px @basic-green,
+        0 3px 5px @basic-scale-grey;
+    }
   }
 }
