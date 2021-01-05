@@ -1,8 +1,30 @@
 .socials__list {
   .reset-list();
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
 }
 
 .socials__link {
-  text-decoration: none;
-  color: @basic-black;
+  &:hover path {
+    fill: @basic-green;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+
+  &--facebook {
+    &:hover path {
+      stroke: @basic-green;
+      fill: none;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
+  }
 }

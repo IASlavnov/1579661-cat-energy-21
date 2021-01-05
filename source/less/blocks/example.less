@@ -2,7 +2,19 @@
   padding: 27px 20px 33px;
   min-width: 280px;
   background-color: @basic-background-grey;
-  //text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 30px 67px;
+    background: linear-gradient(to bottom, @basic-white 50%, @basic-background-grey 50%);
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 110px 75px;
+    display: grid;
+    grid-template-columns: 436px auto;
+    background: linear-gradient(to bottom, @basic-white 30%, @basic-background-grey 30%);
+  }
 }
 
 .example__title {
@@ -10,16 +22,36 @@
   .main-fonts();
   .font-set(36px, 40px);
   padding-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    .font-set(60px, 60px);
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 146px;
+  }
 }
 
 .example__intro {
   color: @special-dark-grey;
   margin: 0;
   padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .font-set(16px, 24px);
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 69px;
+  }
 }
 
 .example__container {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .example__list {
@@ -28,88 +60,103 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+}
+
+.example__item {
+  width: 124px;
+  height: 56px;
+  border: 1px solid @special-grey;
+  border-radius: 3px;
+  text-align: center;
+  margin-right: 28px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+    height: 70px;
+    margin-right: 42px;
+  }
 }
 
 .example__result {
   .main-fonts();
   .font-set(24px, 24px);
+  padding-top: 15px;
+  padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    .font-set(30px, 37px);
+    padding-bottom: 10px;
+  }
 }
 
 .example__description {
   .font-set(12px, 12px);
   color: @special-dark-grey;
-  margin: 0;
+  margin: 0 auto;
+  width: 85px;
+  background-color: @basic-background-grey;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    .font-set(14px, 14px);
+    width: 132px;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-background-grey;
+  }
 }
 
 .example__costs {
   .main-fonts();
   .font-set(14px, 20px);
+  margin: 0 auto;
   text-transform: uppercase;
   text-align: center;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    .font-set(20px, 20px);
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.example__costs-label {
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+    margin-bottom: 9px;
+  }
+}
+
+.example__costs-count {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .example__image-slider {
   text-align: center;
-}
-
-@media (min-width: @tablet-width) {
-  .example__wrapper {
-    padding: 43px 30px 67px;
-    background: linear-gradient(to bottom, @basic-white 50%, @basic-background-grey 50%);
-    text-align: left;
-  }
-
-  .example__title {
-    .font-set(60px, 60px);
-    padding-bottom: 63px;
-  }
-
-  .example__intro {
-    .font-set(16px, 24px);
-    padding-bottom: 54px;
-  }
-
-  .example__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .example__list {
-    width: 50%;
-    margin-bottom: 60px;
-  }
-
-  .example__result {
-    .font-set(30px, 37px);
-  }
-
-  .example__description {
-    .font-set(14px, 14px);
-  }
-
-  .example__costs {
-    .font-set(20px, 20px);
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__wrapper {
-    padding: 70px 110px 75px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .example__title {
-    padding-bottom: 146px;
-  }
-
-  .example__intro {
-    padding-bottom: 69px;
-  }
-
-  .example__list {
-    width: 100%;
-    margin-bottom: 55px;
-  }
 }

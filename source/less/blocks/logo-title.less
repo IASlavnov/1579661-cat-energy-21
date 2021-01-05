@@ -1,4 +1,15 @@
 .logo-title {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 101px;
   height: 18px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .logo-title {
+    display: none;
+  }
 }
