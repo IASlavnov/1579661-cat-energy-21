@@ -3,6 +3,50 @@
   .font-set(24px, 26px);
   margin-top: 6px;
   margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 158px;
+    height: 2px;
+    top: 50%;
+    right: -20px;
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-set(36px, 36px);
+    margin-bottom: 55px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      top: 50%;
+      left: -70px;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      width: 478px;
+      right: -70px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+
+    &::after {
+      width: 1108px;
+      right: -110px;
+    }
+  }
 }
 
 .comment__text {
@@ -16,15 +60,17 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   border: 1px solid @basic-border-grey;
-}
 
-@media (min-width: @tablet-width) {
-  .comment__title {
-    .font-set(36px, 36px);
-    margin-bottom: 55px;
+  &:hover {
+    border-color: @special-grey;
   }
 
-  .comment__text {
+  &:focus {
+    border: 2px solid @special-dark-grey;
+    outline: none;
+  }
+
+  @media (min-width: @tablet-width) {
     height: 174px;
   }
 }

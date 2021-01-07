@@ -3,15 +3,83 @@
   .font-set(24px, 26px);
   margin-top: 26px;
   margin-bottom: 12px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 99px;
+    height: 2px;
+    top: 30%;
+    transform: translateY(-50%);
+    right: -20px;
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-set(36px, 36px);
+    margin-bottom: 55px;
+
+    &::after {
+      width: 145px;
+      top: 55%;
+      right: -70px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      top: 55%;
+      transform: translateY(-50%);
+      left: -70px;
+      background-color: @basic-green;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      width: 778px;
+      right: -110px;
+    }
+
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+  }
+}
+
+.owner__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .owner__info {
   .main-fonts();
   .font-set(16px, 18px);
+  position: relative;
   margin-top: 0;
   text-transform: uppercase;
   color: @special-dark-grey;
   display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    .font-set(20px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
+
+    &:first-child {
+      margin-right: 80px;
+    }
+  }
 }
 
 .owner__input {
@@ -20,34 +88,67 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   padding-left: 15px;
-  border: 1px solid @special-grey;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  border: 1px solid @basic-border-grey;
   flex-grow: 1;
   margin-left: 10px;
-}
 
-@media (min-width: @tablet-width) {
-  .owner__title {
-    .font-set(36px, 36px);
-    margin-bottom: 55px;
+  &:hover {
+    border-color: @special-grey;
   }
 
-  .owner__info {
-    .font-set(20px, 30px);
+  &:focus {
+    border: 2px solid @special-dark-grey;
+    outline: none;
   }
 
-  .owner__input {
+  &:invalid {
+    border: 2px solid @basic-error;
+    box-shadow: none;
+  }
+
+  @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
     padding-left: 20px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .owner__container {
-    display: flex;
-    flex-wrap: wrap;
+.owner__button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--email {
+    width: 20px;
+    height: 14px;
+    right: 15px;
   }
 
-  .owner__info {
-    width: 50%;
+  &--phone {
+    width: 20px;
+    height: 20px;
+    right: 13px;
   }
+
+  @media (min-width: @tablet-width) {
+    &--email {
+      right: 20px;
+    }
+
+    &--phone {
+      right: 16px;
+    }
+  }
+}
+
+.owner__input:disabled + .owner__button path {
+  stroke: @basic-green;
+}
+
+.owner__input:invalid + .owner__button path {
+  stroke: @basic-error;
 }
