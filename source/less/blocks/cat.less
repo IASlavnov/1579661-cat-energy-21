@@ -1,5 +1,13 @@
 .cat {
   border-bottom: 1px solid @basic-grey-border2;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 }
 
 .cat__info {
@@ -8,10 +16,15 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   display: flex;
+  align-items: center;
   margin-top: 0;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-set(20px, 30px);
   }
 }
 
@@ -21,28 +34,34 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   padding-left: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border: 1px solid @basic-border-grey;
   flex-grow: 1;
   margin-left: 10px;
-}
 
-@media (min-width: @tablet-width) {
-  .cat {
-    border: none;
+  &:hover {
+    border-color: @special-grey;
   }
 
-  .cat__info {
-    .font-set(20px, 30px);
+  &:focus {
+    border: 2px solid @special-dark-grey;
+    outline: none;
   }
 
-  .cat__input {
+  &:invalid {
+    border: 2px solid @basic-error;
+    box-shadow: none;
+  }
+
+  @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
     padding-left: 20px;
+    padding-top: 11px;
+    padding-bottom: 12px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .cat {
-    width: 50%;
-  }
+.cat__label {
+  width: max-content;
 }
