@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -14,18 +14,23 @@
   .reset-list();
   .main-fonts();
   .font-set(16px, 18px);
+  margin-top: 8px;
   text-transform: uppercase;
   color: @special-dark-grey2;
 
   @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
     border: 1px solid @basic-border-grey;
-    padding: 25px 0 25px 28px;
+    padding: 27px 0 25px 0;
   }
 }
 
 .program-select__item {
-  margin-bottom: 19px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
@@ -59,7 +64,8 @@
     &::before {
       width: 40px;
       height: 40px;
-      top: -5px;
+      left: 27px;
+      top: -7px;
     }
   }
 }
@@ -77,8 +83,8 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    left: 12px;
-    top: 7px;
+    left: 39px;
+    top: 6px;
   }
 }
 
