@@ -1,9 +1,32 @@
+.slider__images {
+  position: relative;
+  margin-bottom: 257px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 554px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 495px;
+  }
+}
+
 .slider__item {
   display: none;
-  background-color: @basic-background-grey;
 
   &--active {
-    display: inline;
+    display: block;
+    position: absolute;
+    left: -20px;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -60px;
+      left: 134px;
+    }
   }
 }
 
@@ -13,9 +36,9 @@
   align-items: center;
   position: relative;
 
-  /*@media (min-width: @tablet-width) {
-    justify-content: space-around;
-  }*/
+  @media (min-width: @desktop-width) {
+    margin-left: 210px;
+  }
 }
 
 .slider__button {
@@ -26,11 +49,22 @@
   background-color: @basic-background-grey;
   width: 70px;
   height: 40px;
+  padding: 0;
   cursor: pointer;
+
+  &:last-of-type {
+    padding-left: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
+    width: 51px;
+    height: 32px;
     border-bottom: 1px dotted fade(@basic-black, 40%);
+
+    &:last-of-type {
+      padding-left: 0;
+    }
 
     &:hover {
       border-bottom-style: solid;
@@ -44,7 +78,7 @@
 
 .slider__scale {
   //Значение с фигмы - width: 76px;
-  width: 27%;
+  width: 25%;
   height: 6px;
   padding: 3px 5px;
   margin: 0 2px;
@@ -56,7 +90,7 @@
     width: 428px;
     height: 6px;
     padding: 0;
-    margin: 0 12px;
+    margin: 0 22px;
     background-color: @basic-scale-grey;
     border: none;
   }
@@ -64,7 +98,7 @@
 
 .slider__bar {
   //Значение с фигмы - width: 35px;
-  width: 46%;
+  width: 50%;
   height: 6px;
   background-color: @basic-green;
   border-radius: 6px;

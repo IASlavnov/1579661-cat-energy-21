@@ -12,14 +12,10 @@
 
 .programs__wrapper {
   width: auto;
-  padding-top: 22px;
+  padding-top: 21px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 97px;
   }
 }
 
@@ -36,16 +32,19 @@
 .programs__item {
   position: relative;
   background-color: @basic-grey;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 19px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
+    padding: 77px 53px 57px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 40%;
+    width: 38%;
     padding-left: 52px;
+    margin-bottom: 55px;
+    padding-bottom: 0;
   }
 }
 
@@ -55,7 +54,7 @@
   .font-set(24px, 37px);
   text-transform: uppercase;
   padding-left: 71px;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
 
   &--slim {
     &::before {
@@ -102,7 +101,7 @@
       &::before {
         width: 268px;
         height: 200px;
-        top: 50%;
+        top: 52%;
         transform: translateY(-50%);
         left: 58%;
         background-repeat: no-repeat;
@@ -112,7 +111,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 47px 0 73px 162px;
+    padding-left: 162px;
+    padding-bottom: 73px;
 
     &--slim {
       &::before {
@@ -138,6 +138,7 @@
 
 .programs__description {
   margin: 0;
+  margin-right: 5px;
   padding-bottom: 23px;
   color: @special-dark-grey;
   border-bottom: 1px solid @basic-grey-border2;
@@ -146,12 +147,21 @@
     .font-set(16px, 24px);
     color: @basic-black;
     border-bottom: none;
-    padding-bottom: 48px;
-    width: 57%;
+    padding-bottom: 52px;
+    width: 62%;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 28px;
     width: 100%;
+  }
+}
+
+.programs__br {
+  display: none;
+
+  @media (width: @tablet-width) {
+    display: inline;
   }
 }
 
@@ -161,8 +171,8 @@
   color: @basic-black;
   display: inline-block;
   vertical-align: baseline;
-  margin-top: 15px;
-  padding-right: 47px;
+  margin-top: 18px;
+  padding-right: 40px;
   .main-fonts();
   .font-set(16px, 16px);
   text-transform: uppercase;
@@ -179,7 +189,7 @@
   }
 
   &:hover {
-    padding-right: 55px;
+    padding-right: 48px;
   }
 
   &:hover::after {
@@ -193,19 +203,20 @@
 
   @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
-    padding-right: 55px;
+    margin-top: 0;
+    padding-right: 47px;
 
     &:hover {
-      padding-right: 63px;
+      padding-right: 55px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 55px;
-    padding-right: 58px;
+    margin-bottom: 58px;
+    padding-right: 51px;
 
     &:hover {
-      padding-right: 66px;
+      padding-right: 59px;
     }
   }
 }
