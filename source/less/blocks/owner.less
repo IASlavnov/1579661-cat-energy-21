@@ -1,8 +1,23 @@
+.owner {
+  padding-bottom: 0;
+}
+
+.owner__wrapper {
+  padding-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
 .owner__title {
   .main-fonts();
   .font-set(24px, 26px);
-  margin-top: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 34px;
   width: 100%;
   position: relative;
 
@@ -19,12 +34,12 @@
 
   @media (min-width: @tablet-width) {
     .font-set(36px, 36px);
-    margin-bottom: 55px;
+    margin-bottom: 76px;
 
     &::after {
       width: 145px;
-      top: 55%;
-      right: -70px;
+      top: 63%;
+      right: -65px;
     }
 
     &::before {
@@ -32,7 +47,7 @@
       content: "";
       width: 30px;
       height: 2px;
-      top: 55%;
+      top: 63%;
       transform: translateY(-50%);
       left: -70px;
       background-color: @basic-green;
@@ -42,7 +57,7 @@
   @media (min-width: @desktop-width) {
     &::after {
       width: 778px;
-      right: -110px;
+      right: -105px;
     }
 
     &::before {
@@ -82,14 +97,22 @@
   }
 }
 
+.owner__label {
+  padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+  }
+}
+
 .owner__input {
   .main-fonts();
   .font-set(16px, 18px);
   text-transform: uppercase;
   color: @special-dark-grey;
-  padding-left: 15px;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  padding-left: 14px;
+  padding-top: 12px;
+  padding-bottom: 13px;
   border: 1px solid @basic-border-grey;
   flex-grow: 1;
   margin-left: 10px;
@@ -111,6 +134,9 @@
   @media (min-width: @tablet-width) {
     .font-set(20px, 30px);
     padding-left: 20px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    margin-left: 18px;
   }
 }
 
@@ -119,28 +145,38 @@
   border: none;
   position: absolute;
   content: "";
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
 
   &--email {
     width: 20px;
     height: 14px;
-    right: 15px;
+    right: 20px;
   }
 
   &--phone {
     width: 20px;
     height: 20px;
-    right: 13px;
+    right: 20px;
   }
 
   @media (min-width: @tablet-width) {
     &--email {
-      right: 20px;
+      right: 19px;
     }
 
     &--phone {
-      right: 16px;
+      right: 19px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--email {
+      right: 24px;
+    }
+
+    &--phone {
+      right: 23px;
     }
   }
 }

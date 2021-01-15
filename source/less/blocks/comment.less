@@ -1,8 +1,15 @@
+.comment {
+  padding-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+  }
+}
+
 .comment__title {
   .main-fonts();
   .font-set(24px, 26px);
-  margin-top: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   width: 100%;
   position: relative;
 
@@ -18,21 +25,22 @@
 
   @media (min-width: @tablet-width) {
     .font-set(36px, 36px);
-    margin-bottom: 55px;
+    margin-bottom: 76px;
 
     &::before {
       position: absolute;
       content: "";
       width: 30px;
       height: 2px;
-      top: 50%;
+      top: 60%;
       left: -70px;
       background-color: @basic-green;
     }
 
     &::after {
       width: 478px;
-      right: -70px;
+      top: 60%;
+      right: -65px;
     }
   }
 
@@ -53,7 +61,7 @@
   width: 100%;
   height: 150px;
   box-sizing: border-box;
-  padding-top: 13px;
+  padding-top: 10px;
   padding-left: 15px;
   .main-fonts();
   .font-set(16px, 18px);
@@ -71,6 +79,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    .font-set(20px, 30px);
     height: 174px;
+    padding-top: 9px;
+    padding-left: 18px;
   }
 }
