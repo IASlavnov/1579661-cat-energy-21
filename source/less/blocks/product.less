@@ -12,11 +12,13 @@
   .font-set(16px, 20px);
   text-transform: uppercase;
   padding-left: 140px;
+  margin-top: 19px;
+  margin-bottom: 15px;
   width: 76px;
 
   @media (min-width: @tablet-width) {
     .font-set(20px, 24px);
-    margin: 161px auto 20px;
+    margin: 161px auto 15px;
     padding-left: 0;
     width: 150px;
     text-align: center;
@@ -24,27 +26,88 @@
 
   @media (min-width: @desktop-width) {
     .font-set(20px, 21px);
+    margin-bottom: 20px;
   }
 }
 
 .product__image {
   position: absolute;
-  top: 30px;
   left: 56px;
 
+  &--chicken-small {
+    top: 33px;
+  }
+
+  &--fish-small {
+    top: 46px;
+  }
+
+  &--buckwheat-small {
+    top: 49px;
+  }
+
+  &--rice-small {
+    top: 43px;
+    left: 54px;
+  }
+
   &--large {
+    top: 30px;
     left: 48px;
   }
 
   @media (min-width: @tablet-width) {
     left: 50%;
     transform: translateX(-50%);
+
+    &--chicken-small {
+      top: -46px;
+    }
+
+    &--fish-small {
+      top: -48px;
+    }
+
+    &--buckwheat-small {
+      top: -44px;
+    }
+
+    &--rice-small {
+      top: -46px;
+    }
+
+    &--large {
+      top: -74px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--chicken-small {
+      top: -54px;
+    }
+
+    &--fish-small {
+      top: -56px;
+    }
+
+    &--buckwheat-small {
+      top: -52px;
+    }
+
+    &--rice-small {
+      top: -54px;
+    }
+
+    &--large {
+      top: -82px;
+    }
   }
 }
 
 .product__list {
   .reset-list();
   .font-set(12px, 16px);
+  .secondary-fonts();
   color: @special-dark-grey;
   padding-left: 140px;
 
@@ -86,17 +149,18 @@
   text-align: center;
   box-sizing: border-box;
   padding-top: 20px;
-  margin-top: 23px;
-  margin-bottom: 25px;
+  margin-top: 22px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     width: 248px;
-    margin-top: 33px;
-    margin-bottom: 40px;
+    margin-top: 34px;
+    margin-bottom: 38px;
+    margin-left: 3px;
   }
 
   @media (min-width: @desktop-width) {
     width: 168px;
-    margin-left: 5px;
+    margin-left: 0;
   }
 }
